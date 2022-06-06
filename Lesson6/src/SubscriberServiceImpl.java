@@ -59,7 +59,7 @@ public class SubscriberServiceImpl implements SubscriberService {
             }
 
         }
-        System.out.println(result);
+        System.out.println(result + " Gb ");
         System.out.println();
     }
 
