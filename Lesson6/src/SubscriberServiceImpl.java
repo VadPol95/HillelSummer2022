@@ -35,7 +35,7 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     @Override
     public void alphabetSort(ArrayList<Subscriber> subscriber, char letter) {
-        System.out.println("Displaying subscribers whose patronymic starts with a letter " + letter + ":");
+        System.out.println("Displaying subscribers whose patronymic starts with a letter: " + letter);
         for (Subscriber subscribers : subscriber) {
             char[] arrPatronymic = subscribers.getPatronymic().toCharArray();
             if (arrPatronymic[0] == letter) {
