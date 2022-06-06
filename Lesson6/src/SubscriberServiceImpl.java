@@ -37,10 +37,10 @@ public class SubscriberServiceImpl implements SubscriberService {
     public void alphabetSort(ArrayList<Subscriber> subscriber, char letter) {
         System.out.println("Displaying subscribers whose patronymic starts with a letter " + letter + ":");
         for (Subscriber subscribers : subscriber) {
-            char[] arrLastName = subscribers.getPatronymic().toCharArray();
-            if (arrLastName[0] == letter) {
-                System.out.println("Last name: " + subscribers.getPatronymic() + ". First name: " +
-                        subscribers.getName() + ". Patronymic: " + subscribers.getPatronymic() +
+            char[] arrPatronymic = subscribers.getPatronymic().toCharArray();
+            if (arrPatronymic[0] == letter) {
+                System.out.println("Patronymic: " + subscribers.getPatronymic() + ". First name: " +
+                        subscribers.getName() + ". Surname: " + subscribers.getSurname() +
                         ". Number of phone: " + subscribers.getPhoneNumber() + ". Balance: " + subscribers.getBalance());
             }
         }
