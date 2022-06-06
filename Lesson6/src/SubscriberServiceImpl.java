@@ -50,7 +50,7 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     @Override
     public void checkInternetTraffic(ArrayList<Subscriber> subscriber, String city) {
-        System.out.println("The summary internet traffic: ");
+        System.out.println("The summary internet traffic: " + city);
         System.out.println();
         double result = 0;
         for (Subscriber subscribers : subscriber) {
