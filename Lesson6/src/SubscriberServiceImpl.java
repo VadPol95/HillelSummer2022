@@ -49,29 +49,27 @@ public class SubscriberServiceImpl implements SubscriberService {
     }
 
     @Override
-    public void checkInternetTraffic(ArrayList<Subscriber> subscriber, String city) {
+    public int checkInternetTraffic(ArrayList<Subscriber> subscriber, String city) {
         System.out.println("The summary internet traffic: " + city);
-        System.out.println();
-        double result = 0;
+        int result = 0;
         for (Subscriber subscribers : subscriber) {
             if(subscribers.getCity().equals(city)){
                 result += subscribers.getInternetTraffic();
             }
 
         }
-        System.out.println(result + " Gb ");
-        System.out.println();
+        return result;
     }
 
     @Override
-    public void numberOfAbonentWithNegativeBalance(ArrayList<Subscriber> subscriber) {
+    public int numberOfAbonentWithNegativeBalance(ArrayList<Subscriber> subscriber) {
         System.out.println("Users who have negative balance: ");
-        System.out.println();
+        int count = 0;
         for (Subscriber subscribers : subscriber) {
             if (subscribers.getBalance() < 0) {
-                System.out.println(subscribers);
+                count++;
             }
         }
-        System.out.println();
+        return count;
     }
 }

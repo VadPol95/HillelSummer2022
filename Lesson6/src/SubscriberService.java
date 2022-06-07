@@ -7,7 +7,7 @@ public interface SubscriberService {
 
     void alphabetSort(ArrayList<Subscriber> subscriber, char letter);
 
-    void checkInternetTraffic(ArrayList<Subscriber> subscriber, String city);
+    int checkInternetTraffic(ArrayList<Subscriber> subscriber, String city);
 
-    void numberOfAbonentWithNegativeBalance(ArrayList<Subscriber> subscriber);
+    int numberOfAbonentWithNegativeBalance(ArrayList<Subscriber> subscriber);
 }

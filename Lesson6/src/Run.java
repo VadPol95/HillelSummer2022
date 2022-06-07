@@ -4,7 +4,8 @@ public class Run {
         subscriberServiceImpl.checkTimeCityConversation(SubscriberGenerator.getSubscriber(), 15);
         subscriberServiceImpl.checkUsersWhoUseIntercityConnection(SubscriberGenerator.getSubscriber());
         subscriberServiceImpl.alphabetSort(SubscriberGenerator.getSubscriber(), 'P');
-        subscriberServiceImpl.checkInternetTraffic(SubscriberGenerator.getSubscriber(), "Odessa");
-        subscriberServiceImpl.numberOfAbonentWithNegativeBalance(SubscriberGenerator.getSubscriber());
+        System.out.println(subscriberServiceImpl.checkInternetTraffic(SubscriberGenerator.getSubscriber(), "Odessa") + " Gb.");
+        System.out.println();
+        System.out.println(subscriberServiceImpl.numberOfAbonentWithNegativeBalance(SubscriberGenerator.getSubscriber()));
     }
 }
