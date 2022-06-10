@@ -1,6 +1,6 @@
 public class RunApp {
     public static void main(String[] args) {
-        StringArrayServiceImpl stringArray = new StringArrayServiceImpl(10);
+        StringArrayServiceImpl stringArray = new StringArrayServiceImpl();
         stringArray.add("Vadym");
         stringArray.add("Artem");
         stringArray.add("Vladislav");
