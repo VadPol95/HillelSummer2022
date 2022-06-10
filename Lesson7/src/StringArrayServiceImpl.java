@@ -4,10 +4,11 @@ public class StringArrayServiceImpl implements StringArrayService {
     private String[] array;
     private int count;
 
-    public StringArrayServiceImpl(int length) {
-        this.array = new String[length];
+    public StringArrayServiceImpl() {
+        this.array = new String[10];
         this.count = 0;
     }
+
     @Override
     public boolean add(String value) {
         if (count == array.length)
@@ -15,6 +16,7 @@ public class StringArrayServiceImpl implements StringArrayService {
         array[count++] = value;
         return false;
     }
+
     @Override
     public boolean add(int index, String value) {
         if (index > count) {
@@ -29,9 +31,10 @@ public class StringArrayServiceImpl implements StringArrayService {
         count++;
         return false;
     }
+
     @Override
     public boolean delete(int index) {
-        if(index > count){
+        if (index > count) {
             return false;
         }
         for (int i = index; i < array.length - 1; i++) {
@@ -41,6 +44,7 @@ public class StringArrayServiceImpl implements StringArrayService {
         count--;
         return true;
     }
+
     @Override
     public boolean delete(String value) {
         for (int i = 0; i < array.length; i++) {
