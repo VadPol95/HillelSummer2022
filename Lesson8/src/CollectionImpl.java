@@ -11,12 +11,12 @@ import java.util.Objects;
  */
 
 public class CollectionImpl implements Collection {
-    private Object[] array;
+    private String[] array;
     private int count;
     private final int INITIAL_CAPACITY = 10;
 
     public CollectionImpl() {
-        this.array = new Object[INITIAL_CAPACITY];
+        this.array = new String[INITIAL_CAPACITY];
         this.count = 0;
     }
 
@@ -60,7 +60,7 @@ public class CollectionImpl implements Collection {
     @Override
     public String get(int index) {
         isOutOfBound(index);
-        return (String) array[index];
+        return array[index];
     }
 
     @Override
@@ -100,7 +100,7 @@ public class CollectionImpl implements Collection {
 
 
     private void grow(int newLength) {
-        Object[] newArray = new Object[newLength];
+        String[] newArray = new String[newLength];
         for (int i = 0; i < array.length; i++) {
             newArray[i] = array[i];
         }
