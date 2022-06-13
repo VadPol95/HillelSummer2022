@@ -88,7 +88,7 @@ public class CollectionImpl implements Collection {
 
     @Override
     public boolean clear() {
-        array = new CollectionImpl[10];
+        array = new String[10];
         this.count = 0;
         return true;
     }
