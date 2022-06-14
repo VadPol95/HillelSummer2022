@@ -7,7 +7,7 @@ public class RunCollection {
         stringCollection.add("Artem");
         stringCollection.add("Vladislav");
         stringCollection.add("Arnold");
-        System.out.println(stringCollection.equals(new CollectionImpl()));
+        System.out.println(stringCollection.get(0).equals(stringCollection.get(1)));
         System.out.println(stringCollection.get(0));
         stringCollection.add(4, "Kostya");
         stringCollection.delete("Kostya");

@@ -1,3 +1,4 @@
+
 import java.util.Objects;
 
 /**
@@ -64,9 +65,15 @@ public class CollectionImpl implements Collection {
     }
 
     @Override
-    public boolean contain(String o) {
+    public boolean contain(String value) {
         for (int i = 0; i < count; i++) {
-            if (o.equals(array[i])) {
+            if (value == null & array[i] == null) {
+                return true;
+            }
+            if (value == null | array[i] == null) {
+                continue;
+            }
+            if (value.equals(array[i])) {
                 return true;
             }
         }
@@ -75,12 +82,11 @@ public class CollectionImpl implements Collection {
 
     @Override
     public boolean equals(Collection str) {
-        if (count != str.size()) {
-            return false;
-        }
-        for (int i = 0; i < count; i++) {
-            if (array[i] != str.get(i)) {
-                return false;
+        for (int i = 0; i < str.size(); i++) {
+            for (int j = 0; j < str.size(); j++) {
+                if (!(str.get(i).contains(array[j]))) {
+                    return false;
+                }
             }
         }
         return true;
@@ -126,4 +132,5 @@ public class CollectionImpl implements Collection {
         count--;
         return true;
     }
+
 }
