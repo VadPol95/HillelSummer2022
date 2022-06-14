@@ -65,15 +65,15 @@ public class CollectionImpl implements Collection {
     }
 
     @Override
-    public boolean contain(String value) {
+    public boolean contain(String o) {
         for (int i = 0; i < count; i++) {
-            if (value == null & array[i] == null) {
+            if (o == null & array[i] == null) {
                 return true;
             }
-            if (value == null | array[i] == null) {
+            if (o == null | array[i] == null) {
                 continue;
             }
-            if (value.equals(array[i])) {
+            if (o.equals(array[i])) {
                 return true;
             }
         }
