@@ -123,7 +123,7 @@ public class CustomCollectionImpl implements CustomCollection {
     }
 
     private void isOutOfBound(int index) {
-        if (index > size || index < 0) {
+        if (index >= size || index < 0) {
             throw new IndexOutOfBoundsException("Incorrect index entry");
 
         }
