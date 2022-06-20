@@ -11,9 +11,10 @@ import java.util.Objects;
  * метод size - получает размер списка.
  */
 
-public class CollectionImpl implements Collection {
+public class CollectionImpl implements Collection, Iterator {
     private String[] array;
     private int count;
+    private int index;
     private final int INITIAL_CAPACITY = 10;
 
     public CollectionImpl() {
@@ -104,6 +105,16 @@ public class CollectionImpl implements Collection {
         return count;
     }
 
+    @Override
+    public boolean hasNext() {
+        return index < array.length;
+    }
+
+    @Override
+    public String next() {
+        return array[index++];
+    }
+
 
     private void grow(int newLength) {
         String[] newArray = new String[newLength];
@@ -132,5 +143,6 @@ public class CollectionImpl implements Collection {
         count--;
         return true;
     }
+
 
 }
