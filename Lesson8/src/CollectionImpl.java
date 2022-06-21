@@ -131,7 +131,7 @@ public class CollectionImpl implements Collection, Iterator {
     }
 
     @Override
-    public void forEach(CollectionImpl collection) {
+    public void forEachRemaining(CollectionImpl collection) {
         while (collection.iterator.hasNext()) {
             System.out.println(iterator.hasNext());
         }
