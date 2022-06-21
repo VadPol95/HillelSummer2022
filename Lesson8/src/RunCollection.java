@@ -12,10 +12,9 @@ public class RunCollection {
         stringCollection.add(4, "Kostya");
         stringCollection.delete("Kostya");
         System.out.println(stringCollection.contain("Vadym"));
-        stringCollection.forEachRemaining(stringCollection);
-        stringCollection.remove();
+        stringCollection.iterator.remove();
         System.out.println(stringCollection.contain("Vadym"));
-        System.out.println(stringCollection.hasNext());
+        System.out.println(stringCollection.iterator.hasNext());
         stringCollection.clear();
         System.out.println(stringCollection.contain("Vadym"));
 
