@@ -106,7 +106,27 @@ public class CollectionImpl implements Collection, Iterator {
     }
 
 
-    Iterator iterator = new CollectionImpl();
+    Iterator iterator = new Iterator() {
+        @Override
+        public boolean hasNext() {
+            return false;
+        }
+
+        @Override
+        public String next() {
+            return null;
+        }
+
+        @Override
+        public void remove() {
+
+        }
+
+        @Override
+        public void forEachRemaining(CollectionImpl collection) {
+
+        }
+    };
 
     @Override
     public boolean hasNext() {
