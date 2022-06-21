@@ -105,14 +105,36 @@ public class CollectionImpl implements Collection, Iterator {
         return count;
     }
 
+
+    Iterator iterator = new CollectionImpl();
+
     @Override
     public boolean hasNext() {
         return index < array.length;
+
     }
 
     @Override
     public String next() {
         return array[index++];
+    }
+
+    @Override
+    public void remove() {
+        final String[] newArray = new String[array.length - 1];
+        int indexToRemove = index + 1;
+
+        System.arraycopy(array, 0, newArray, 0, indexToRemove);
+        System.arraycopy(array, indexToRemove + 1, newArray, indexToRemove, newArray.length - indexToRemove);
+
+        array = newArray;
+    }
+
+    @Override
+    public void forEach(CollectionImpl collection) {
+        while (collection.iterator.hasNext()) {
+            System.out.println(iterator.hasNext());
+        }
     }
 
 
