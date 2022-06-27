@@ -67,9 +67,11 @@ class CollectionImplTest {
         CollectionImpl array1 = new CollectionImpl();
         CollectionImpl array2 = new CollectionImpl();
         array.add("Vadym");
+        array.add("Vadym");
         array.add("Petr");
         array.add("Ivan");
         array.add("Vladimir");
+        array1.add("Vadym");
         array1.add("Vadym");
         array1.add("Petr");
         array1.add("Ivan");
@@ -80,6 +82,8 @@ class CollectionImplTest {
         array2.add("Vladislav");
         assertTrue(array.equals(array1));
         assertFalse(array.equals(array2));
+        assertEquals(array.get(0),array.get(1));
+        assertEquals(array.get(0),array.get(2));
     }
 
     @org.junit.jupiter.api.Test
