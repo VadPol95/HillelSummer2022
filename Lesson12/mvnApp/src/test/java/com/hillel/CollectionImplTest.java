@@ -98,19 +98,14 @@ class CollectionImplTest {
 
     @org.junit.jupiter.api.Test
     void size() {
-        CollectionImpl array1 = new CollectionImpl();
-        assertEquals(0, array1.size());
-
         CollectionImpl array = new CollectionImpl();
+        assertEquals(0, array.size());
         array.add("Vadym");
         array.add("Petr");
         array.add("Ivan");
         array.add("Vladimir");
         assertEquals(4, array.size());
-
-        CollectionImpl array2 = new CollectionImpl();
-        array.add("Vladimir");
-        array2.delete("Vladimir");
-        assertEquals(0, array1.size());
+        array.delete("Vladimir");
+        assertEquals(3, array.size());
     }
 }
