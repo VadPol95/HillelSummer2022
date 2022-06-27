@@ -50,7 +50,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>com.hillel.Run</mainClass>
+                                <mainClass>com.hillel.RunCollection</mainClass>
                             </manifest>
                         </archive>
                     </configuration>
