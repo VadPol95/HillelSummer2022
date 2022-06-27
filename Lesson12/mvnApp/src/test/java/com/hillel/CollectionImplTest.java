@@ -1,10 +1,10 @@
 package com.hillel;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.jupiter.api.Test;
 class CollectionImplTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void add() {
         CollectionImpl array = new CollectionImpl();
         assertEquals(0, array.size());
@@ -13,7 +13,7 @@ class CollectionImplTest {
         assertEquals("Vadym", array.get(0));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testAdd() {
         CollectionImpl array = new CollectionImpl();
         assertEquals(0, array.size());
@@ -25,7 +25,7 @@ class CollectionImplTest {
         assertEquals("Vladimir", array.get(3));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void delete() {
         CollectionImpl array = new CollectionImpl();
         assertEquals(0, array.size());
@@ -38,8 +38,8 @@ class CollectionImplTest {
         assertEquals(3, array.size());
     }
 
-    @org.junit.jupiter.api.Test
-    void get() {
+    @Test
+     void get() {
         CollectionImpl array = new CollectionImpl();
         array.add("Vadym");
         array.add("Petr");
@@ -50,7 +50,7 @@ class CollectionImplTest {
         assertEquals(3, array.size());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void contain() {
         CollectionImpl array = new CollectionImpl();
         array.add("Vadym");
@@ -61,7 +61,7 @@ class CollectionImplTest {
         assertFalse(array.contain("Вадим"));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testEquals() {
         CollectionImpl array = new CollectionImpl();
         CollectionImpl array1 = new CollectionImpl();
@@ -86,7 +86,7 @@ class CollectionImplTest {
         assertEquals(array.get(0),array.get(2));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void clear() {
         CollectionImpl array = new CollectionImpl();
         assertEquals(0, array.size());
@@ -100,7 +100,7 @@ class CollectionImplTest {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void size() {
         CollectionImpl array = new CollectionImpl();
         assertEquals(0, array.size());
