@@ -14,7 +14,7 @@ class StreamMethodTest {
         strings.add("Vadym");
         strings.add("Arnold");
         strings.add("four");
-        assertEquals("[five, four]", StreamMethod.FilterStringByLengthAndCase(strings).toString());
+        assertEquals("[five, four]", StreamMethod.filterStringByLengthAndCase(strings).toString());
     }
 
     @Test
