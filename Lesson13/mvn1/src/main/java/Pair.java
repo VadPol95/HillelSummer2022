@@ -11,8 +11,8 @@ public class Pair {
     @Override
     public String toString() {
         return "Pair{" +
-                "lowerCaseValue='" + lowerCaseValue + '\'' +
-                ", upperCaseValue='" + upperCaseValue + '\'' +
+                lowerCaseValue + '\'' +
+                ", " + upperCaseValue + '\'' +
                 '}';
     }
 }
