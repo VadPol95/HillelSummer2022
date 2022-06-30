@@ -22,6 +22,6 @@ public class RunStream {
         strings1.add("three");
         strings1.add("four");
         strings1.add("five");
-        System.out.println(StreamMethod.FilterStringByLengthAndCase(strings1));
+        System.out.println(StreamMethod.filterStringByLengthAndCase(strings1));
     }
 }

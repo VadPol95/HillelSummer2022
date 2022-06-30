@@ -5,7 +5,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class StreamMethod {
-    public static List<String> FilterStringByLengthAndCase(List<String> strings) {
+    public static List<String> filterStringByLengthAndCase(List<String> strings) {
         Predicate<String> isLowerCase = str -> str.equals(str.toLowerCase());
         Predicate<String> isFourSymbols = str -> (str.length() == 4);
 
