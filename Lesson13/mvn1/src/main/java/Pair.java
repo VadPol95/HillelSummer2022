@@ -12,7 +12,7 @@ public class Pair {
     public String toString() {
         return "Pair{" +
                 lowerValue + '\'' +
-                ", " + upperValue + "\"" +
+                ", " + upperValue + '\'' +
                 '}';
     }
 

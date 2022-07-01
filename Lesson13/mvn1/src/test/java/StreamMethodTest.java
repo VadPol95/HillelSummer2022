@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -20,12 +21,8 @@ class StreamMethodTest {
     @Test
     void toUpperCase() {
         List<String> strings = new ArrayList<>();
-        List<Pair> pairs = new ArrayList<>();
         strings.add("one");
-        Pair pair = new Pair("one", "ONE");
-        pairs.add(pair);
-
-        assertEquals(pairs.toString(), StreamMethod.toUpperCase(strings).toString());
+        assertEquals("[Pair{one', ONE'}]", StreamMethod.toUpperCase(strings).toString());
     }
 
 
