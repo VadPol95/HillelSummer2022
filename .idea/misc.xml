@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" project-jdk-name="18" project-jdk-type="JavaSDK">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/FirstMavenApp/pom.xml" />
+        <option value="$PROJECT_DIR$/mvn/mvnApp/mvnApp/pom.xml" />
+        <option value="$PROJECT_DIR$/mvn/mvnAp/pom.xml" />
+        <option value="$PROJECT_DIR$/mvnApp/pom.xml" />
+        <option value="$PROJECT_DIR$/mvn/mvnApp/pom.xml" />
+        <option value="$PROJECT_DIR$/Lesson12/mvnApp/pom.xml" />
+        <option value="$PROJECT_DIR$/mvnApp2/pom.xml" />
+        <option value="$PROJECT_DIR$/mvnAp/pom.xml" />
+        <option value="$PROJECT_DIR$/mvnLesson13/pom.xml" />
+        <option value="$PROJECT_DIR$/mvn1/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Lesson13/mvnApp2/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
