@@ -22,7 +22,7 @@ class StreamMethodTest {
     void toUpperCase() {
         List<String> strings = new ArrayList<>();
         strings.add("one");
-        assertEquals("[Pair{one', ONE'}]", StreamMethod.toUpperCase(strings).toString());
+        assertEquals("[Pair{one : ONE}]", StreamMethod.toUpperCase(strings).toString());
     }
 
 
