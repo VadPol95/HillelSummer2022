@@ -1,5 +1,4 @@
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -15,9 +14,7 @@ public class StreamMethod {
     }
 
     public static List<Pair> toUpperCase(List<String> strings) {
-        List<Pair> pairList = new ArrayList<>();
-        strings.forEach(str -> pairList.add(new Pair(str)));
-        return pairList;
+        return strings.stream().map(Pair::new).collect(Collectors.toList());
     }
 
     public static double listsAverage(List<Integer> integers) {

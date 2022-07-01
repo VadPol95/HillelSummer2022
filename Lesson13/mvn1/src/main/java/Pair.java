@@ -1,18 +1,16 @@
 public class Pair {
-    private final String lowerCaseValue;
-    private final String upperCaseValue;
+    private final String value;
 
-    public Pair(String lowerCaseValue) {
-        this.lowerCaseValue = lowerCaseValue;
-        this.upperCaseValue = lowerCaseValue.toUpperCase();
+    public Pair(String value) {
+        this.value = value;
     }
 
 
     @Override
     public String toString() {
         return "Pair{" +
-                lowerCaseValue + '\'' +
-                ", " + upperCaseValue + '\'' +
+                value + '\'' +
+                ", " + value.toUpperCase() + "\"" +
                 '}';
     }
 }
