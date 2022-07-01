@@ -14,7 +14,9 @@ public class StreamMethod {
     }
 
     public static List<Pair> toUpperCase(List<String> strings) {
-        return strings.stream().map(Pair::new).collect(Collectors.toList());
+        return strings.stream()
+                .map(s -> new Pair(s, s.toUpperCase()))
+                .collect(Collectors.toList());
     }
 
     public static double listsAverage(List<Integer> integers) {
