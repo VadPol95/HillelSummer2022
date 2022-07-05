@@ -3,22 +3,22 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class CheckNumber {
-    public static long[] longArray() throws IOException {
+    public static String[] stringsArray() throws IOException {
         System.out.println("Enter a number, not a letter");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String numbers = br.readLine();
 
         if (isDigit(numbers)) {
             String[] arrayNumbers = numbers.split("");
-            long[] numbersFromConsole = new long[numbers.length()];
+            String[] numbersFromConsole = new String[numbers.length()];
 
             for (int i = 0; i < arrayNumbers.length; i++) {
-                numbersFromConsole[i] = Long.parseLong(arrayNumbers[i]);
+                numbersFromConsole[i] = String.valueOf(arrayNumbers[i]);
 
             }
             return numbersFromConsole;
         } else System.out.println("Invalid input, please try again)");
-        return longArray();
+        return stringsArray();
     }
 
 
@@ -27,7 +27,7 @@ public class CheckNumber {
             return false;
         }
         try {
-            long l = Long.parseLong(strNum);
+            String l = strNum;
         } catch (NumberFormatException exception) {
             return false;
         }
