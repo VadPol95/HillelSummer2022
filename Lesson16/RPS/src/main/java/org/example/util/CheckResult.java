@@ -7,6 +7,7 @@ public class CheckResult {
         String line = null;
         if( gameResult == 0){
             line = "Ties";
+            pl.setTies(pl.getTies() + 1);
         }if(gameResult == 1){
             line = "Player " + pl.getName() +" Win.";
             pl.setWin(pl.getWin() + 1);

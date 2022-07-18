@@ -39,7 +39,7 @@ public class StartGame {
             gameNumber--;
 
         }
-        pl.setTies(pl.getTies() + 1);
+
         System.out.println(pl);
 
     }
