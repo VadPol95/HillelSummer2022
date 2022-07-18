@@ -7,27 +7,25 @@ public class Hand {
         System.out.println("Rock, Paper or Scissors");
         String hand = Helper.getString();
         int handNum;
-        switch (hand){
-            case "Rock":
-                handNum = 0;
-                break;
 
-            case "Scissors":
-                handNum = 1;
-                break;
+        if (hand.equalsIgnoreCase("Rock")) {
+            handNum = 0;
+        } else if (hand.equalsIgnoreCase("Scissors")) {
+            handNum = 1;
 
-            case "Paper":
-                handNum = 2;
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + hand);
+        } else if (hand.equalsIgnoreCase("Paper")) {
+            handNum = 2;
+        } else {
+            throw new IllegalStateException("Unexpected value: " + hand);
         }
+
         return handNum;
     }
-    public static String givePlayerHand(int pcHand) throws IOException {
+
+    public static String givePlayerHand(int pcHand){
 
         String hand;
-        switch (pcHand){
+        switch (pcHand) {
             case 0:
                 hand = "Rock";
                 break;
@@ -46,9 +44,9 @@ public class Hand {
         return hand;
     }
 
-    public static String givePcHand(int pcHand) throws IOException {
+    public static String givePcHand(int pcHand) {
         String hand;
-        switch (pcHand){
+        switch (pcHand) {
             case 0:
                 hand = "Rock";
                 break;
@@ -66,7 +64,7 @@ public class Hand {
         return hand;
     }
 
-    public static int giveComputerHand(){
-        return Helper.getRandomNumber(0,3);
+    public static int giveComputerHand() {
+        return Helper.getRandomNumber(0, 3);
     }
 }
