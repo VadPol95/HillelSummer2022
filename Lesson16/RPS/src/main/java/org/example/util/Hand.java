@@ -8,12 +8,12 @@ public class Hand {
         String hand = Helper.getString();
         int handNum;
 
-        if (hand.equalsIgnoreCase("Rock")) {
+        if (hand.equalsIgnoreCase("R")) {
             handNum = 0;
-        } else if (hand.equalsIgnoreCase("Scissors")) {
+        } else if (hand.equalsIgnoreCase("S")) {
             handNum = 1;
 
-        } else if (hand.equalsIgnoreCase("Paper")) {
+        } else if (hand.equalsIgnoreCase("P")) {
             handNum = 2;
         } else {
             throw new IllegalStateException("Unexpected value: " + hand);
@@ -58,8 +58,9 @@ public class Hand {
             case 2:
                 hand = "Paper";
                 break;
+
             default:
-                throw new IllegalStateException("Unexpected value: ");
+                throw new IllegalStateException("Unexpected value: " + pcHand);
         }
         return hand;
     }

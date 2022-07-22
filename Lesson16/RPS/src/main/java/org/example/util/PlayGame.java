@@ -7,7 +7,7 @@ public class PlayGame {
         int [][] board = Board.giveBoard();
         int computerHand = Hand.giveComputerHand();
         int playerHand = Hand.giveHand();
-        System.out.println("Player throw :" + Hand.givePlayerHand(playerHand) + ", Computer throw :" + Hand.givePcHand(computerHand));
+        System.out.println("Player throw : " + Hand.givePlayerHand(playerHand) + ", Computer throw : " + Hand.givePcHand(computerHand));
         return board[playerHand][computerHand];
     }
 }
